@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organic Store - Home</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,8 +12,9 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-leaf text-success me-2"></i>OrganicStore
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo/logo Organic food .png" alt="Logo" width="45" height="45" class="rounded-circle me-2 shadow-sm">
+                <span class="text-success">OrganicStore</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-3">
-                        <button id="darkModeBtn" title="Ganti Tema" style="background:none; border:none; cursor:pointer;">
+                        <button id="darkModeBtn" style="background:none; border:none; cursor:pointer;" title="Dark Mode">
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
@@ -36,109 +36,86 @@
         </div>
     </nav>
 
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 10000;"></div>
+
     <header id="heroCarousel" class="carousel slide mb-5 shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
         </div>
-        <div class="carousel-inner rounded-bottom-4">
+        <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" style="height: 500px; object-fit: cover; filter: brightness(0.6);" alt="Farm">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80" class="d-block w-100" style="height: 500px; object-fit: cover; filter: brightness(0.7);" alt="Farm">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="display-4 fw-bold">Fresh & Organic Market</h1>
-                    <p class="lead">Langsung dari petani lokal untuk kesehatan keluarga Anda.</p>
+                    <p class="lead">Pilihan organik terbaik langsung dari petani.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" style="height: 500px; object-fit: cover; filter: brightness(0.6);" alt="Fruits">
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1600&q=80" class="d-block w-100" style="height: 500px; object-fit: cover; filter: brightness(0.7);" alt="Fruits">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="display-4 fw-bold">Buah-buahan Segar</h1>
                     <p class="lead">Dipetik pagi hari, dikirim hari ini juga.</p>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" style="height: 500px; object-fit: cover; filter: brightness(0.6);" alt="Vegetables">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="display-4 fw-bold">Sayuran Hijau Alami</h1>
-                    <p class="lead">Tanpa pestisida, 100% organik bersertifikat.</p>
-                </div>
-            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon"></span>
         </button>
     </header>
 
     <main class="container mb-5">
         <div class="d-flex justify-content-center flex-wrap mb-4" id="category-filters">
             <button class="category-btn active" onclick="filterProducts('all')">Semua</button>
-            <button class="category-btn" onclick="filterProducts('buah')">Buah-buahan</button>
-            <button class="category-btn" onclick="filterProducts('sayur')">Sayur-sayuran</button>
-            <button class="category-btn" onclick="filterProducts('snack')">Snack Organik</button>
+            <button class="category-btn" onclick="filterProducts('buah')">Buah</button>
+            <button class="category-btn" onclick="filterProducts('sayur')">Sayur</button>
+            <button class="category-btn" onclick="filterProducts('snack')">Snack</button>
             <button class="category-btn" onclick="filterProducts('minuman')">Minuman</button>
         </div>
 
         <div class="row g-4" id="product-list">
-            <div class="col-12 text-center py-5">
-                <div class="spinner-border text-success" role="status"></div>
-                <p class="mt-2 text-muted">Memuat produk segar...</p>
             </div>
-        </div>
     </main>
 
-    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="productModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row g-0">
                         <div class="col-md-6 bg-light d-flex align-items-center justify-content-center p-3">
-                            <img src="" id="modal-img" class="product-detail-img shadow-sm rounded" alt="Produk" style="width:100%; max-height:300px; object-fit:cover;">
+                            <img src="" id="modal-img" class="img-fluid rounded shadow-sm" style="max-height:300px;">
                         </div>
-                        <div class="col-md-6">
-                            <div class="detail-container p-3">
-                                <span class="badge bg-success mb-2" id="modal-category">KATEGORI</span>
-                                <h2 class="fw-bold" id="modal-title">Nama Produk</h2>
-                                <p class="text-muted small">SKU: <span id="modal-id">123</span></p>
-                                
-                                <h3 class="text-success fw-bold" id="modal-price">Rp 0</h3>
-                                <p class="text-secondary" id="modal-desc">Deskripsi produk...</p>
-                                
-                                <hr>
-                                
-                                <div class="mb-3">
-                                    <label class="fw-bold small text-muted">JUMLAH BELI:</label>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <button class="btn btn-outline-success btn-sm" onclick="updateQuantity(-1)">-</button>
-                                        <input type="text" id="qty-input" value="1" readonly class="form-control mx-2 text-center" style="width: 50px;">
-                                        <button class="btn btn-outline-success btn-sm" onclick="updateQuantity(1)">+</button>
-                                    </div>
+                        <div class="col-md-6 p-3">
+                            <span class="badge bg-success mb-2" id="modal-category">KAT</span>
+                            <h2 class="fw-bold" id="modal-title">Nama Produk</h2>
+                            <p class="small text-muted">SKU: <span id="modal-id"></span></p>
+                            <h3 class="text-success fw-bold" id="modal-price">Rp 0</h3>
+                            <p class="text-secondary" id="modal-desc">Deskripsi...</p>
+                            <hr>
+                            <div class="mb-3">
+                                <label class="fw-bold small text-muted">JUMLAH:</label>
+                                <div class="d-flex align-items-center mt-1">
+                                    <button class="btn btn-outline-success btn-sm" onclick="updateQuantity(-1)">-</button>
+                                    <input type="text" id="qty-input" value="1" readonly class="form-control mx-2 text-center" style="width: 50px;">
+                                    <button class="btn btn-outline-success btn-sm" onclick="updateQuantity(1)">+</button>
                                 </div>
-
-                                <div class="alert alert-success d-flex justify-content-between align-items-center">
-                                    <strong>Total:</strong>
-                                    <strong id="modal-total-price" class="fs-4">Rp 0</strong>
-                                </div>
-
-                                <div class="d-grid gap-2 d-md-flex">
-                                    <button class="btn btn-outline-success flex-fill" 
-                                        onclick="alert('Barang sudah dimasukan keranjang jangan sampai ketinggalan harga menarik ini yaa!!')">
-                                        <i class="fas fa-cart-plus me-1"></i> Keranjang
-                                    </button>
-                                    
-                                    <button class="btn btn-success flex-fill" 
-                                        onclick="alert('Terima kasih telah berbelanja pesanan mu akan segera kami kirim')">
-                                        Beli Sekarang
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="alert alert-success d-flex justify-content-between align-items-center">
+                                <strong>Total:</strong><strong id="modal-total-price">Rp 0</strong>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button class="btn btn-outline-success flex-fill" onclick="showFloatingAlert('<strong>Added to cart!</strong> Produk masuk keranjang.')">
+                                    <i class="fas fa-cart-plus me-1"></i> Keranjang
+                                </button>
+                                <button class="btn btn-success flex-fill" onclick="showFloatingAlert('<strong>Berhasil!</strong> Pesanan Anda sedang diproses.')">
+                                    Beli Sekarang
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -148,10 +125,7 @@
     </div>
 
     <footer class="footer-custom text-center py-4 bg-light mt-5 border-top">
-        <div class="container">
-            <p class="mb-0 fw-bold">&copy; 2025 Kelompok 19 Organic Store</p>
-            <small class="text-muted">Follow us on Instagram | Facebook</small>
-        </div>
+        <div class="container"><p class="mb-0 fw-bold">&copy; 2025 Kelompok 19 Organic Store</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
