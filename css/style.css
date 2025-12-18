@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* =========================================
    1. VARIABLE & GLOBAL SETTINGS
    ========================================= */
@@ -24,44 +23,19 @@ body.dark-mode {
     --border-color: #444444;        /* Garis Gelap */
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
     --shadow-lg: 0 10px 25px rgba(0,0,0,0.7);
-=======
-/* VARIABEL GLOBAL & FITUR DARK MODE */
-:root {
-    --primary-green: #4CAF50;
-    --dark-green: #2E7D32;
-    --bg-body: #f8f9fa;
-    --bg-card: #ffffff;
-    --text-main: #333333;
-    --shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-body.dark-mode {
-    --primary-green: #66bb6a;
-    --dark-green: #81c784;
-    --bg-body: #121212;
-    --bg-card: #1e1e1e;
-    --text-main: #e0e0e0;
-    --shadow: 0 5px 15px rgba(0,0,0,0.5);
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
 }
 
 body {
     background-color: var(--bg-body);
     color: var(--text-main);
-<<<<<<< HEAD
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
-=======
-    font-family: 'Segoe UI', sans-serif;
-    transition: all 0.3s ease;
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 main { flex: 1; }
-<<<<<<< HEAD
 a { text-decoration: none; }
 
 /* OVERRIDE BOOTSTRAP AGAR MENGIKUTI VARIABEL TEMA KITA */
@@ -88,6 +62,12 @@ body.dark-mode .border-top {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* Efek Tambahan saat discroll (Opsional jika JS mendukung) */
+.navbar.scrolled {
+    padding: 8px 0;
+    box-shadow: var(--shadow-lg);
+}
+
 .navbar-brand img {
     border: 2px solid var(--primary-green);
 }
@@ -96,45 +76,12 @@ body.dark-mode .border-top {
     font-weight: 500;
     color: var(--text-main) !important;
     transition: color 0.2s;
-=======
-
-/* NAVBAR DAN EFEK SCROL*/
-.navbar {
-    background-color: var(--bg-card) !important;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    padding: 10px 0;
-}
-
-/* Efek saat discroll: Navbar mengecil & bayangan menebal */
-.navbar.scrolled {
-    padding: 5px 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    background-color: rgba(255, 255, 255, 0.95) !important;
-}
-body.dark-mode .navbar.scrolled {
-    background-color: rgba(30, 30, 30, 0.95) !important;
-}
-
-.navbar-brand span {
-    font-weight: 800;
-    color: var(--primary-green);
-    font-size: 1.4rem;
-    vertical-align: middle;
-}
-
-.nav-link {
-    font-weight: 600;
-    color: var(--text-main) !important;
-    transition: color 0.3s;
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
 }
 
 .nav-link:hover, .nav-link.active {
     color: var(--primary-green) !important;
 }
 
-<<<<<<< HEAD
 /* Tombol Hamburger Menu (Garis Tiga) saat Dark Mode */
 body.dark-mode .navbar-toggler-icon {
     filter: invert(1); /* Membalik warna icon jadi putih */
@@ -171,54 +118,15 @@ body.dark-mode .navbar-toggler {
     border-radius: 50px;
     padding: 8px 25px;
     border: 1px solid var(--primary-green);
-=======
-/*ALERT CUSTOM */
-.custom-alert {
-    background-color: #d1e7dd; /* Hijau muda lembut */
-    color: #0f5132;            /* Teks hijau tua */
-    border: 1px solid #badbcc;
-    border-left: 5px solid #198754; /* Garis tebal di kiri */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 15px 20px;
-    min-width: 320px;
-    max-width: 450px;
-    position: relative;
-    animation: slideInTop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 10000;
-}
-
-.custom-alert strong {
-    font-weight: 800;
-    margin-right: 5px;
-}
-
-/* Animasi Muncul dari Atas */
-@keyframes slideInTop {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* KOMPONEN */
-.category-btn {
-    border-radius: 50px;
-    padding: 8px 25px;
-    margin: 5px;
-    border: 2px solid var(--primary-green);
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
     color: var(--primary-green);
     background: transparent;
     font-weight: 600;
     transition: all 0.3s;
-<<<<<<< HEAD
     font-size: 0.9rem;
-=======
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
 }
 
 .category-btn.active, .category-btn:hover {
     background-color: var(--primary-green);
-<<<<<<< HEAD
     color: #fff !important; /* Teks jadi putih saat aktif */
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -231,24 +139,10 @@ body.dark-mode .navbar-toggler {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-=======
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-}
-
-.product-card {
-    background-color: var(--bg-card);
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 .product-card:hover { 
     transform: translateY(-5px); 
     box-shadow: var(--shadow-lg) !important;
@@ -327,6 +221,7 @@ body.dark-mode .btn-close {
     border-left: 5px solid #198754;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     min-width: 300px;
+    z-index: 10000;
 }
 
 /* Alert Text Fix inside Dark Mode */
@@ -341,15 +236,4 @@ body.dark-mode .btn-close {
     background-color: var(--bg-card) !important;
     color: var(--text-muted);
     border-top: 1px solid var(--border-color) !important;
-=======
-.product-card:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.footer-custom {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 30px 0;
->>>>>>> e6392df3a41495ad55476520949c83d58c3afda0
 }
