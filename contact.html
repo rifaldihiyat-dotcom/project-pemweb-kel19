@@ -1,0 +1,83 @@
+*Anggota 5: The Validator (Contact & About)*
+
+html contant
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Organic Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo/logo Organic food .png" alt="Logo" width="45" height="45" class="rounded-circle me-2 shadow-sm">
+                <span class="text-success">OrganicStore</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-3">
+                        <button id="darkModeBtn" style="background:none; border:none; cursor:pointer;"><i class="fas fa-moon"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 10000;"></div>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow border-0 product-card">
+                    <div class="card-body p-5">
+                        <h2 class="text-center fw-bold mb-4">Hubungi Kami</h2>
+                        <p class="text-center text-muted mb-4">Punya pertanyaan atau saran? Silakan isi form di bawah.</p>
+                        
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Nama Lengkap <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="inputNama" placeholder="Contoh: Budi Santoso">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="nama@email.com">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Pesan <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="inputPesan" rows="5" placeholder="Tulis pesan Anda..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                                <i class="fas fa-paper-plane me-2"></i> Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom text-center py-4 bg-light mt-5 border-top">
+        <div class="container"><p class="mb-0 fw-bold">&copy; 2025 Kelompok 19 Organic Store</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
