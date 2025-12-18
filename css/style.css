@@ -1,0 +1,232 @@
+/* =========================================
+   1. VARIABLE & GLOBAL SETTINGS
+   ========================================= */
+:root {
+    /* --- WARNA TEMA TERANG (DEFAULT) --- */
+    --primary-green: #198754;       /* Hijau Bootstrap */
+    --bg-body: #f8f9fa;             /* Abu-abu sangat muda */
+    --bg-card: #ffffff;             /* Putih */
+    --text-main: #212529;           /* Hitam Hampir Pekat */
+    --text-muted: #6c757d;          /* Abu-abu Teks */
+    --border-color: #dee2e6;        /* Garis Tipis */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- WARNA TEMA GELAP (DARK MODE) --- */
+body.dark-mode {
+    --primary-green: #2ecc71;       /* Hijau lebih cerah (Neon) */
+    --bg-body: #121212;             /* Hitam Pekat */
+    --bg-card: #1e1e1e;             /* Abu-abu Gelap */
+    --text-main: #e0e0e0;           /* Putih Gading */
+    --text-muted: #adb5bd;          /* Abu-abu Terang */
+    --border-color: #444444;        /* Garis Gelap */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+a { text-decoration: none; }
+
+/* OVERRIDE BOOTSTRAP AGAR MENGIKUTI VARIABEL TEMA KITA */
+h1, h2, h3, h4, h5, h6, p, span, div, li { color: var(--text-main); }
+.text-muted { color: var(--text-muted) !important; }
+.text-success { color: var(--primary-green) !important; }
+
+/* Override bg-light agar tidak putih silau saat Dark Mode */
+body.dark-mode .bg-light {
+    background-color: #2c2c2c !important; 
+}
+body.dark-mode .border-top {
+    border-color: var(--border-color) !important;
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+    background-color: var(--bg-card) !important;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand img {
+    border: 2px solid var(--primary-green);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-main) !important;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-green) !important;
+}
+
+/* Tombol Hamburger Menu (Garis Tiga) saat Dark Mode */
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(1); /* Membalik warna icon jadi putih */
+}
+body.dark-mode .navbar-toggler {
+    border-color: var(--text-muted);
+}
+
+/* Badge Keranjang */
+.badge-cart {
+    font-size: 0.65rem;
+    padding: 0.35em 0.65em;
+}
+
+/* =========================================
+   3. HERO CAROUSEL (SLIDER)
+   ========================================= */
+/* FIX: Tulisan Slider Selalu Putih & Ada Bayangan */
+.carousel-caption h1, 
+.carousel-caption p,
+.carousel-caption .lead {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* =========================================
+   4. FILTER KATEGORI & PRODUK
+   ========================================= */
+#category-filters {
+    gap: 10px;
+}
+
+.category-btn {
+    border-radius: 50px;
+    padding: 8px 25px;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.category-btn.active, .category-btn:hover {
+    background-color: var(--primary-green);
+    color: #fff !important; /* Teks jadi putih saat aktif */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Kartu Produk */
+.product-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color) !important;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.product-card img {
+    transition: transform 0.5s ease;
+}
+
+/* Efek Zoom Gambar saat Hover */
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   5. MODAL & FORM
+   ========================================= */
+.modal-content {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Tombol Close (X) di Modal saat Dark Mode */
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Input Quantity */
+#qty-input {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+/* Input Form (Login/Register/Contact) */
+.form-control, .form-select {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* Input Group Text (Icon di samping input) */
+.input-group-text {
+    background-color: var(--bg-body) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* =========================================
+   6. ANIMASI & ALERT
+   ========================================= */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Alert (Pojok Kanan Atas) */
+.custom-alert {
+    background-color: #d1e7dd;
+    color: #0f5132 !important;
+    border-left: 5px solid #198754;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    min-width: 300px;
+}
+
+/* Alert Text Fix inside Dark Mode */
+.custom-alert div, .custom-alert i {
+    color: #0f5132 !important; /* Paksa tetap hijau gelap agar terbaca */
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+.footer-custom {
+    background-color: var(--bg-card) !important;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color) !important;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang & Cara Belanja - Organic Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo/logo Organic food .png" alt="Logo" width="45" height="45" class="rounded-circle me-2 shadow-sm" onerror="this.src='https://dummyimage.com/45x45/198754/fff&text=OS'">
+                <span class="text-success">OrganicStore</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cara-belanja.html">Cara Belanja</a></li>
+
+                    <li class="nav-item ms-2">
+                         <a href="login.html" class="btn btn-outline-success btn-sm rounded-pill px-3">Masuk</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a href="profile.html" class="nav-link text-success" title="Akun Saya">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2 me-2">
+                        <a href="cara-belanja.html" class="position-relative text-decoration-none text-success">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-cart" style="font-size: 0.6rem;">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <button id="darkModeBtn" style="background:none; border:none; cursor:pointer; padding: 5px;" title="Dark Mode">
+                            <i class="fas fa-moon text-secondary"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 10000;"></div>
+
+    <main class="container py-5">
+        
+        <div class="text-center mb-5 fade-in">
+            <h2 class="fw-bold">Panduan Belanja</h2>
+            <p class="text-muted">Ikuti langkah mudah berikut untuk mendapatkan produk segar</p>
+        </div>
+
+        <div class="row g-4 text-center mb-5 fade-in">
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm product-card">
+                    <div class="mb-3">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                            <i class="fas fa-shopping-basket fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold">1. Pilih Produk</h4>
+                    <p class="text-muted small">Cari sayur atau buah favoritmu di halaman Home, lalu klik tombol "Beli".</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm product-card">
+                    <div class="mb-3">
+                        <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                            <i class="fas fa-comments-dollar fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold">2. Pembayaran</h4>
+                    <p class="text-muted small">Lakukan pembayaran sesuai total harga di keranjang bawah ini.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm product-card">
+                    <div class="mb-3">
+                        <div class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                            <i class="fas fa-shipping-fast fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold">3. Pengiriman</h4>
+                    <p class="text-muted small">Kurir kami akan mengantar pesanan langsung ke depan pintu Anda.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row g-5">
+            <div class="col-lg-8 fade-in">
+                <h3 class="fw-bold mb-4 text-success"><i class="fas fa-shopping-cart me-2"></i>Keranjang Belanja</h3>
+                <div class="card border-0 shadow-sm">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 ps-4">Produk</th>
+                                    <th class="py-3">Harga</th>
+                                    <th class="py-3">Jumlah</th>
+                                    <th class="py-3">Total</th>
+                                    <th class="py-3">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-table-body">
+                                <tr><td colspan="5" class="text-center py-4">Memuat keranjang...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 fade-in">
+                <div class="card border-0 shadow-sm bg-light">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3">Ringkasan Pesanan</h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Subtotal</span>
+                            <span class="fw-bold" id="checkout-subtotal" data-val="0">Rp 0</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Pengiriman</span>
+                            <span class="fw-bold text-success" id="checkout-shipping">Rp 0</span>
+                        </div>
+                        <hr>
+                        
+                        <form id="checkoutForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">KURIR PENGIRIMAN</label>
+                                <select class="form-select" id="courierSelect" required>
+                                    <option value="0" selected disabled>-- Pilih Kurir --</option>
+                                    <option value="15000">GoSend Instant (Rp 15.000)</option>
+                                    <option value="10000">GrabExpress SameDay (Rp 10.000)</option>
+                                    <option value="20000">JNE YES (Rp 20.000)</option>
+                                    <option value="0">Ambil Sendiri (Gratis)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-muted">METODE PEMBAYARAN</label>
+                                <select class="form-select" required>
+                                    <option value="tf">Transfer Bank (BCA/Mandiri)</option>
+                                    <option value="qris">QRIS (GoPay/OVO/Dana)</option>
+                                    <option value="cod">COD (Bayar di Tempat)</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-4 align-items-center">
+                                <span class="h5 mb-0 fw-bold">Total Bayar</span>
+                                <span class="h4 mb-0 fw-bold text-success" id="checkout-total">Rp 0</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-success w-100 py-2 fw-bold shadow-sm">
+                                <i class="fas fa-lock me-2"></i>Bayar Sekarang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 text-center">
+            <p class="text-muted small mb-3">Kami menerima pembayaran melalui:</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap opacity-75">
+                <span class="badge bg-white text-dark border px-3 py-2">BCA</span>
+                <span class="badge bg-white text-dark border px-3 py-2">Mandiri</span>
+                <span class="badge bg-white text-dark border px-3 py-2">GoPay</span>
+                <span class="badge bg-white text-dark border px-3 py-2">OVO</span>
+                <span class="badge bg-white text-dark border px-3 py-2">Dana</span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer-custom text-center py-4 bg-light mt-5 border-top">
+        <div class="container">
+            <p class="mb-0 fw-bold text-muted">&copy; 2025 Kelompok 19 Organic Store</p>
+            <small class="text-muted">Dibuat dengan <i class="fas fa-heart text-danger"></i> untuk Mata Kuliah Pemrograman Web</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

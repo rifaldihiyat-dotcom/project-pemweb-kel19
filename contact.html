@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Organic Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo/logo Organic food .png" alt="Logo" width="45" height="45" class="rounded-circle me-2 shadow-sm" onerror="this.src='https://dummyimage.com/45x45/198754/fff&text=OS'">
+                <span class="text-success">OrganicStore</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cara-belanja.html">Cara Belanja</a></li>
+
+                    <li class="nav-item ms-2">
+                         <a href="login.html" class="btn btn-outline-success btn-sm rounded-pill px-3">Masuk</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a href="profile.html" class="nav-link text-success" title="Akun Saya">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2 me-2">
+                        <a href="keranjang.html" class="position-relative text-decoration-none text-success">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-cart" style="font-size: 0.6rem;">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <button id="darkModeBtn" style="background:none; border:none; cursor:pointer; padding: 5px;" title="Dark Mode">
+                            <i class="fas fa-moon text-secondary"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 10000;"></div>
+
+    <main class="container py-5">
+        <div class="text-center mb-5 fade-in">
+            <h2 class="fw-bold">Hubungi Kami</h2>
+            <p class="text-muted">Kami siap mendengar masukan, saran, atau pertanyaan Anda.</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-5 fade-in">
+                <div class="h-100 d-flex flex-column justify-content-center">
+                    <h3 class="fw-bold mb-4 text-success">Kantor Pusat</h3>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Alamat</h5>
+                            <p class="text-muted mb-0">Jl. Lenteng Agung Raya No. 20<br>Jakarta Selatan, DKI Jakarta</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Email</h5>
+                            <p class="text-muted mb-0">hello@kelompok19.com<br>support@organicstore.id</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">WhatsApp</h5>
+                            <p class="text-muted mb-0">+62 812-3456-7890<br>(Senin - Jumat, 09:00 - 17:00)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+                        <a href="#" class="btn btn-outline-success rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-success rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-success rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 fade-in">
+                <div class="card shadow border-0 product-card">
+                    <div class="card-body p-5">
+                        <h4 class="fw-bold mb-4">Kirim Pesan</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-muted">NAMA LENGKAP <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="inputNama" placeholder="Nama Anda" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-muted">EMAIL <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="email@contoh.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold small text-muted">PESAN <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="inputPesan" rows="5" placeholder="Tuliskan pertanyaan atau saran Anda..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-success w-100 py-2 fw-bold shadow-sm">
+                                        <i class="fas fa-paper-plane me-2"></i> Kirim Pesan
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom text-center py-4 bg-light mt-5 border-top">
+        <div class="container">
+            <p class="mb-0 fw-bold text-muted">&copy; 2025 Kelompok 19 Organic Store</p>
+            <small class="text-muted">Dibuat dengan <i class="fas fa-heart text-danger"></i> untuk Mata Kuliah Pemrograman Web</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

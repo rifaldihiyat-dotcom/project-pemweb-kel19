@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Organic Store</title>
+    <title>FAQ - Organic Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,11 +22,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
                     <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="cara-belanja.html">Cara Belanja</a></li>
 
                     <li class="nav-item ms-2">
@@ -59,41 +59,67 @@
     <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 10000;"></div>
 
     <main class="container py-5">
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6 mb-4 mb-md-0 fade-in">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
-                     class="img-fluid rounded-4 shadow product-card" 
-                     alt="Tentang Kami">
-            </div>
-            
-            <div class="col-md-6 fade-in">
-                <span class="text-success fw-bold text-uppercase ls-2">Tentang Kami</span>
-                <h2 class="display-5 fw-bold mb-3 mt-2">Kelompok 19 Organic</h2>
-                <p class="lead text-muted">Kami berdedikasi menyediakan pangan sehat organik langsung dari petani lokal ke meja makan Anda.</p>
-                
-                <p>Website ini menyediakan sayur-sayuran segar, buah-buahan manis, serta makanan & minuman ringan yang menyehatkan tanpa bahan pengawet berbahaya.</p>
-                
-                <p>Didirikan sebagai projek UAS Pemrograman Web, toko ini berkembang menjadi simulasi e-commerce modern yang mengedepankan teknologi dan kesehatan. Kami percaya bahwa makanan sehat adalah hak semua orang.</p>
-                
-                <div class="row mt-4 g-3">
-                    <div class="col-4 text-center">
-                        <div class="p-3 border rounded bg-light h-100 category-btn">
-                            <h3 class="fw-bold text-success mb-0">100%</h3>
-                            <small class="fw-bold text-muted">Organik</small>
+        <div class="text-center mb-5 fade-in">
+            <h2 class="fw-bold">Apa yang sering di tanya oleh pelanggan kami ?</h2>
+            <p class="text-muted">apakah ada pertanyaan mu di bawah ?</p>
+        </div>
+
+        <div class="row justify-content-center fade-in">
+            <div class="col-lg-8">
+                <div class="accordion shadow-sm" id="faqAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <strong>Apakah sayuran di sini benar-benar organik?</strong>
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ya, 100% organik. Kami bekerja sama langsung dengan petani bersertifikat organik tanpa menggunakan pestisida kimia berbahaya.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4 text-center">
-                        <div class="p-3 border rounded bg-light h-100 category-btn">
-                            <h3 class="fw-bold text-success mb-0">50+</h3>
-                            <small class="fw-bold text-muted">Petani</small>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <strong>Bagaimana cara pengirimannya?</strong>
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Kami menggunakan kurir instan (Gojek/Grab) untuk menjaga kesegaran produk. Pesanan sebelum jam 14.00 akan dikirim di hari yang sama.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4 text-center">
-                        <div class="p-3 border rounded bg-light h-100 category-btn">
-                            <h3 class="fw-bold text-success mb-0">24h</h3>
-                            <small class="fw-bold text-muted">Support</small>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <strong>Apakah ada garansi jika buah busuk?</strong>
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Tentu! Jika Anda menerima produk yang kurang segar atau rusak, foto dan kirimkan ke WhatsApp kami dalam 1x24 jam untuk penggantian gratis.
+                            </div>
                         </div>
                     </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <strong>Bagaimana cara pembayarannya?</strong>
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Saat ini kami menerima pembayaran via Transfer Bank (BCA, Mandiri) dan E-Wallet (OVO, GoPay, Dana) melalui sistem QRIS.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

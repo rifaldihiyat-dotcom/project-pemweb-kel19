@@ -1,75 +1,87 @@
-#  OrganicStore  - website organic store
+# 🥗 Organic Store - Kelompok 19
 
-## nama anggota kelompok
+**Organic Store** adalah platform e-commerce berbasis web yang menyediakan berbagai produk organik segar seperti buah, sayur, makanan ringan, dan minuman sehat. Proyek ini dibuat sebagai tugas akhir (UAS) mata kuliah **Pemrograman Web**.
+
+Website ini dirancang dengan tampilan modern, **Responsive**, **Interaktif**, dan dilengkapi fitur **Dark Mode**.
+
+---
+
+## 👥 Anggota Kelompok
+
 | Nama | NIM |
 |------|-----|
-[Rifaldi hidayat] | [0110125090] 
+| ZULFAHAN UMILLAH | 0110125127 |
+| RIFALDI HIDAYAT | 0110125090 |
+| MAULAD ARDAFFA P | 0110125147 |
+| NAZKA KHAULAH S | 0110125100 |
+| MUHAMMAD HILMI | 0110125033 |
+
+---
+## 📖 Deskripsi Website
+**Organic Store** adalah website e-commerce yang menyediakan berbagai produk organik segar, termasuk buah-buahan, sayuran, makanan ringan, dan minuman sehat. Website ini dirancang untuk memberikan pengalaman berbelanja yang mudah dan menyenangkan bagi pengguna yang peduli dengan gaya hidup sehat. Dengan tampilan yang modern dan responsif, Organic Store memastikan kenyamanan pengguna baik saat diakses melalui desktop maupun perangkat mobile.
+Website ini menampilkan katalog produk yang lengkap dengan informasi detail, sistem keranjang belanja yang interaktif, serta fitur Dark Mode untuk kenyamanan mata pengguna. Organic Store bertujuan untuk memudahkan konsumen dalam mendapatkan produk organik berkualitas tinggi secara online.
 
 
+## ✨ Fitur Utama
 
-## deskripsi website
-**OrganicStore** adalah website e-commerce yang menyediakan berbagai produk organik berkualitas tinggi. Website ini dirancang untuk memberikan pengalaman belanja yang mudah dan menyenangkan bagi pengguna yang peduli dengan gaya hidup sehat dan ramah lingkungan. Dengan tampilan yang bersih dan modern, OrganicStore menampilkan berbagai kategori produk seperti makanan organik, minuman sehat, produk perawatan tubuh, dan banyak lagi. Website ini juga dilengkapi dengan fitur-fitur interaktif seperti sistem keranjang belanja, proses checkout yang sederhana, dan informasi lengkap tentang setiap produk untuk membantu pengguna membuat pilihan yang tepat.
+### 🛒 Sistem Belanja (Shopping Cart)
+- **Real-time Cart:** Menambah produk ke keranjang tanpa reload halaman.
+- **Persistent Storage:** Data keranjang tersimpan otomatis di browser (LocalStorage), sehingga tidak hilang saat di-refresh.
+- **Kalkulasi Otomatis:** Menghitung subtotal dan total harga secara otomatis.
 
-## fitur utama
-### UI/UX Features
-- **Dark/Light Mode Toggle** - Pengguna dapat beralih antara tema gelap dan terang
-- **Responsive Design** - Tampilan optimal di semua device (desktop, tablet, mobile)
-- **Smooth Animations** - Efek fade-up pada scroll dan transisi yang halus
-- **Hero Image Slider** - Slider otomatis dengan 3 gambar produk organik yang berganti setiap 3 detik
-- **Interactive Elements** - Hover effects, transitions, dan micro-interactions
+### 🎨 Tampilan & UX
+- **Dark Mode / Light Mode:** Pengguna bisa mengganti tema sesuai kenyamanan mata.
+- **Responsive Design:** Tampilan rapi di Desktop, Tablet, dan Mobile.
+- **Interaktif:** Efek hover pada kartu produk dan animasi halus saat halaman dimuat.
 
-### E-Commerce Features
-- **Shopping Cart System** - Keranjang belanja yang interaktif
-  - Tambah produk ke keranjang
-  - Update jumlah item (+/-)
-  - Hapus item dari keranjang
-  - Hitung total harga otomatis 
-- **Product Catalog** - Tampilan produk dengan informasi lengkap
-  - Nama produk dan deskripsi
-    - Harga
-    - Rating bintang
-    - Label (Bestseller, New)
-- **Checkout Process** - Proses pemesanan yang sederhana
+### 📱 Manajemen Produk
+- **Katalog Lengkap:** Menampilkan produk Buah, Sayur, Snack, dan Minuman.
+- **Filter Kategori:** Memudahkan pencarian produk berdasarkan jenisnya.
+- **Modal Detail:** Klik produk untuk melihat detail lengkap (Gambar, Deskripsi, Harga) dalam pop-up.
 
-### User Experience Features
-- **Back to Top Button** - Tombol untuk kembali ke atas halaman
-- **Smooth Scrolling** - Navigasi antar section yang smooth
-- **Mobile Navigation** - Navbar yang collapse pada mobile
-- **Contact Form** - Form kontak dengan validasi
-- **Interactive Map** - Google Maps untuk lokasi toko
+### 🔐 Fitur Pengguna
+- **Simulasi Login & Register:** Halaman masuk dan daftar yang terintegrasi.
+- **Halaman Profil:** Menampilkan data diri pengguna dan riwayat pesanan (dummy).
+- **Form Checkout:** Simulasi pengiriman dengan pilihan kurir dan metode pembayaran.
 
-### Technical Features
-- **Local Storage** - Menyimpan preferensi tema pengguna
-- **Form Validation** - Validasi input pada form kontak
-- **Auto-slide Hero** - Slider otomatis dengan pause on hover
-- **Bootstrap Components** - Modal, navbar, cards, dan layout system
+---
 
-## teknologi yang digunakan
-### Frontend
-- **HTML5** - Struktur dasar website
-- **CSS3** - Styling dengan custom properties (variables)
-- **JavaScript (ES6+)** - Interaktivitas dan logika aplikasi
-- **Bootstrap 5.3** - Framework CSS untuk responsive design
-- **Font Awesome 6** - Ikon untuk UI elements
+## 🛠️ Teknologi yang Digunakan
 
-## hasil screenshot tampilan
-### Hero Section (Dark Mode)
-![Hero Section Dark](https://via.placeholder.com/800x450/1a120b/D4AF37?text=Hero+Section+Dark+Mode)
---- IGNORE ---
-*Hero section dengan slider gambar dan tombol CTA*
-### Products Section
-![Products Section](https://via.placeholder.com/800x450/ffffff/000000?text=Products+Section)
---- IGNORE ---
-*Section produk dengan kartu produk organik*
-### Shopping Cart (Light Mode)
-![Shopping Cart Light](https://via.placeholder.com/800x450/ffffff/000000?text=Shopping+Cart+Light+Mode)
---- IGNORE ---
-*Keranjang belanja dengan item yang ditambahkan*
-![Products Section](https://via.placeholder.com/800x450/ffffff/000000?text=Products+Section)
---- IGNORE ---
-*Section produk dengan kartu produk organik*
-### Shopping Cart (Light Mode)
-![Shopping Cart Light](https://via.placeholder.com/800x450/ffffff/000000?text=Shopping+Cart+Light+Mode)
---- IGNORE ---
-*Keranjang belanja dengan item yang ditambahkan*
-)
+Proyek ini dibangun menggunakan teknologi web standar:
+
+* **HTML5** - Struktur dasar halaman web.
+* **CSS3** - Styling kustom dan variabel CSS untuk tema warna.
+* **Bootstrap 5.3** - Framework CSS untuk layout grid, navbar, modal, dan komponen responsif.
+* **JavaScript (Vanilla ES6)** - Logika pemrograman untuk keranjang belanja, filter produk, dan manipulasi DOM.
+* **Font Awesome 6** - Ikon antarmuka (User, Cart, Moon/Sun).
+
+---
+
+
+### 📸 Screenshot Tampilan
+
+---
+
+## 📸 Galeri Tampilan
+
+Berikut adalah cuplikan tampilan dari website Organic Store:
+
+### 🏠 Tampilan Utama (Home)
+Menampilkan banner slider, navigasi lengkap, dan fitur pencarian kategori.
+![Halaman Home](screenshots/tampilan-utama.png)
+
+## tampilan dark mode
+![Dark Mode](screenshots/tampilan-utama-darkmode.png)
+
+### 🥬 Katalog Produk
+Daftar produk dengan harga, kategori, dan tombol "Tambah ke Keranjang" yang interaktif.
+![Katalog Produk](screenshots/katalog.png)
+
+### 🛒 Keranjang Belanja
+Fitur keranjang yang dapat menghitung total harga secara otomatis.
+![Keranjang Belanja](screenshots/keranjang.png)
+
+### 📱 Tampilan Responsif (Mobile)
+Website tetap rapi dan mudah digunakan saat dibuka melalui handphone.
+![Tampilan Mobile](screenshots/responsive.png)
